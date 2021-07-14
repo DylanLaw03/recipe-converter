@@ -1,9 +1,37 @@
+import React, { useCallback, useState } from 'react';
 
 export const PreInputs = (props) => {
-    props.changeNumIngredients(12);
-    props.changeOriginalServings(15);
-    props.changeNewServings(5);
+    
+    //create functions to handle changing variables
+    const handleNumIngredientsChange = (e) => {
+      const numIngredients = e.target.value;
+      props.changeNumIngredients(numIngredients);
+    };
+  
     return (
-        <h1>Test</h1>
-    )
-}
+    
+      <div className="pre-inputs">
+        <form>
+          <label>Original Servings: </label>
+          <input
+            defaultValue={props.numIngredients}
+            onChange={handleNumIngredientsChange}
+            type="number"
+          />
+        </form>
+      </div>
+    );
+  };
+
+/*
+        <div className='pre-inputs'>
+            <form>
+                <input type='number'
+                    name='numOriginalServings'
+                    value={numOriginalServings}
+                    onChange={props.changeOriginalServings(numOriginalServings)}
+                />
+            </form>
+            <h1>{numOriginalServings}</h1>
+        </div>
+*/
