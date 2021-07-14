@@ -5,14 +5,16 @@ export const PreInputs = (props) => {
     //create functions to handle changing variables
     const handleNumIngredientsChange = (e) => {
       const numIngredients = e.target.value;
-      props.changeNumIngredients(numIngredients);
+      if (props.numIngredients > 0) {
+        props.changeNumIngredients(numIngredients);
+      }
     };
   
     return (
     
       <div className="pre-inputs">
         <form>
-          <label>Original Servings: </label>
+          <label>Number of Ingrients: </label>
           <input
             defaultValue={props.numIngredients}
             onChange={handleNumIngredientsChange}
@@ -22,16 +24,3 @@ export const PreInputs = (props) => {
       </div>
     );
   };
-
-/*
-        <div className='pre-inputs'>
-            <form>
-                <input type='number'
-                    name='numOriginalServings'
-                    value={numOriginalServings}
-                    onChange={props.changeOriginalServings(numOriginalServings)}
-                />
-            </form>
-            <h1>{numOriginalServings}</h1>
-        </div>
-*/
