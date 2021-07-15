@@ -10,7 +10,7 @@ import './App.css';
 
 function App() {
   //define variables using states
-  const [numIngredients, setNumIngredients] = useState(5);
+  const [numIngredients, setNumIngredients] = useState(6);
   const [originalServings, setOriginalServings] = useState(8);
   const [newServings, setNewServings] = useState(4);
 
@@ -30,10 +30,14 @@ function App() {
   return (
     <div>
       <Header title="test"/>
-      <h1>{numIngredients}</h1>
+      <h1>numIngredients: {numIngredients} <br /> originalServings: {originalServings} <br /> newServings: {newServings}</h1>
       <PreInputs
         numIngredients={numIngredients}
         changeNumIngredients={handleNumIngredients}
+        originalServings={originalServings}
+        changeOriginalServings={handleOriginalServings}
+        newServings={newServings}
+        changeNewServings={handleNewServings}
       />
       <IngredientsInput numIngredients={numIngredients} />
       
