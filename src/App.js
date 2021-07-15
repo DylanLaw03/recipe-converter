@@ -38,7 +38,11 @@ function App() {
         newServings={newServings}
         changeNewServings={handleNewServings}
       />
-      <IngredientsInput numIngredients={numIngredients} />
+      <IngredientsInput 
+        numIngredients={numIngredients}
+        originalServings={originalServings}
+        newServings={newServings}
+      />
       
     </div>
   );

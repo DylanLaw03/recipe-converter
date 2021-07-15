@@ -1,10 +1,12 @@
 import { IngredientsInputBar } from './IngredientsInputBar';
 
 export const IngredientsInput = (props) => {
-    let numInputs = [];
+    let inputBars = [];
     for (let i = 0; i < props.numIngredients; i++) {
-        numInputs.push(<IngredientsInputBar />);
+        inputBars.push(<IngredientsInputBar
+                            newServings={props.newServings}
+                            originalServings={props.originalServings}/>);
     }
-    return numInputs;
+    return inputBars;
 }
     
