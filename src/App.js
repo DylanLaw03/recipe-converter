@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { Header } from './js-scripts/Header';
 import { PreInputs } from './js-scripts/PreInputs';
