@@ -30,7 +30,6 @@ function App() {
   return (
     <div>
       <Header title="test"/>
-      <h1>numIngredients: {numIngredients} <br /> originalServings: {originalServings} <br /> newServings: {newServings}</h1>
       <PreInputs
         numIngredients={numIngredients}
         changeNumIngredients={handleNumIngredients}
