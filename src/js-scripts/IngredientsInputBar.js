@@ -43,8 +43,8 @@ export const IngredientsInputBar = (props) => {
     }
 
     return (
-        <div>
-            <form>
+        <div className='ingredients-input-bar'>
+            <form className='input'>
                 <input
                     type='number'
                     id='quantity'
@@ -52,7 +52,7 @@ export const IngredientsInputBar = (props) => {
                     onChange={getVariables}
                 />
             </form>
-            <h3>New Quantity: {fractionalize( ( (props.newServings / props.originalServings) * quantity) )}</h3>
+            <h3 className='new-quantity'>New Quantity: {fractionalize( ( (props.newServings / props.originalServings) * quantity) )}</h3>
 
         </div>
     );

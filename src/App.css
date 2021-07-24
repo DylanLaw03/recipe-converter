@@ -58,3 +58,24 @@ body {
     margin-right: 5px;
     border-radius: 10px;
 }
+.ingredients-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ingredients-input-bar {
+    display: flex;
+    background-color: rgb(55, 104, 50);
+    width: 500px;
+    justify-content: center;
+    align-content: center;
+    border: 5px solid tomato;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-top: 10px;
+    height: 65px;
+
+}
+

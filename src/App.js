@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div>
-      <Header title="test"/>
+      <Header title="Recipe Converter"/>
       <PreInputs
         numIngredients={numIngredients}
         changeNumIngredients={handleNumIngredients}
@@ -38,12 +38,13 @@ function App() {
         newServings={newServings}
         changeNewServings={handleNewServings}
       />
-      <IngredientsInput 
-        numIngredients={numIngredients}
-        originalServings={originalServings}
-        newServings={newServings}
-      />
-      
+      <div className='ingredients-input'>
+        <IngredientsInput  className='input-bar'
+          numIngredients={numIngredients}
+          originalServings={originalServings}
+          newServings={newServings}
+        />
+      </div>
     </div>
   );
 }
