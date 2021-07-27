@@ -45,7 +45,7 @@ export const IngredientsInputBar = (props) => {
     return (
         <div className='ingredients-input-bar'>
             <form className='input'>
-                <input
+                <input min="1"
                     type='number'
                     id='quantity'
                     value={quantity}

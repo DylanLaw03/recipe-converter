@@ -24,7 +24,7 @@ export const PreInputs = (props) => {
       <div className="pre-inputs">
         <form className='num-ingredients'>
           <label>Number of Ingredients: </label>
-          <input
+          <input min="1"
             defaultValue={props.numIngredients}
             onChange={handleNumIngredientsChange}
             type="number"
@@ -33,7 +33,7 @@ export const PreInputs = (props) => {
 
         <form className='original-servings'>
           <label>Original Servings: </label>
-          <input
+          <input min="1"
             defaultValue={props.originalServings}
             onChange={handleOriginalServingsChange}
             type="number"
@@ -42,7 +42,7 @@ export const PreInputs = (props) => {
 
         <form className='new-servings'>
           <label>New Servings: </label>
-          <input
+          <input min="1"
             defaultValue={props.newServings}
             onChange={handleNewServingsChange}
             type="number"
